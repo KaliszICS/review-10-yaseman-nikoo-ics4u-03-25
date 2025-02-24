@@ -1,7 +1,7 @@
 public class PracticeProblem {
 
 	public static void main(String args[]) {
-		
+		System.out.println(pyramid(-10));
 	}
 	public static String pyramid(int num){
 		String word="";
@@ -22,7 +22,8 @@ public class PracticeProblem {
 		for (int z=0; z<num-1; z++){
 			word = word + "* ";
 		}
-		word = word +"*";
+		if (num>0){
+		word = word +"*";}
 		return word;
 	}
 	public static String square(int num){
@@ -49,7 +50,7 @@ public class PracticeProblem {
 	public static boolean hasLowercase(String word){
 		boolean answer=false;
 		for (int i=0; i<word.length();i++){
-			if ((word.charAt(i)).isLowerCase()){
+			if (Character.isLowerCase(word.charAt(i))){
 				answer=true;
 			}
 		}
